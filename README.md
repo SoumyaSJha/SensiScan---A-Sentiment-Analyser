@@ -1,1 +1,1 @@
-# SensiScan---A-Sentiment-Analyser
+# SensiScan: A Sentiment Analyser
