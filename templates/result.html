@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='img4.jpeg') }}");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 48px;
+            flex-direction: column;
+            color: black;
+        }
+
+        .result {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin-top: 30px;
+        }
+
+        .sentence, .sentiment {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color:white;font-size:100px;">SENSISCAN</h1>
+    <div class="result">
+       <center> <div class="sentence">
+            INPUT SENTENCE: <br>{{ sentence }}
+        </div><br>
+        <div class="sentiment">
+            PREDICTED SENTIMENT: <br>{{ sentiment }} </center>
+        </div>
+    </div>
+</body>
+</html>

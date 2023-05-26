@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='img4.jpeg') }}");
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-size:48px;
+            flex-direction:column;
+        }
+
+        #banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: auto;
+            z-index: 1;
+        }
+
+        form {
+            position: relative;
+            top: auto;
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #ccc;
+        }
+
+        input[type="text"] {
+            font-size: 32px;
+            padding: 10px;
+            border: solid 1px;
+            border-radius: 5px;
+            outline: none;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+
+        }
+
+        input[type="submit"] {
+            font-size: 32px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+   <center> <b><p style="color:white;font-size:100px;">SENSISCAN</p></center></b>
+    <r><form method="POST" action="/predict">
+      <center>  <label for="sentence">Enter a sentence:</label><br><br>
+        <input type="text" id="sentence" name="sentence"><br><br></center>
+        <center><input type="submit" value="SUBMIT"></center>
+    </form>
+</body>
+</html>
